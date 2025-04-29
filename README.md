@@ -33,9 +33,10 @@ Yes, our simulated system state is safe and deadlock can be avoided. The safe se
 
 ## How to compile and run:
 **To compile:**
-- g++ main.cpp banker.cpp -o banker
+g++ main.cpp banker.cpp -o banker
+
 **To run:**
-- ./banker
+./banker
 
 ## Expected output:
 
