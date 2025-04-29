@@ -32,9 +32,9 @@ Yes, our simulated system state is safe and deadlock can be avoided. The safe se
 - If the processes are ran in this order, the needs of each process will be satisfied and each process will eventually get the resources that it needs
 
 ## How to compile and run:
-To **compile**:
+**To compile:**
 - g++ main.cpp banker.cpp -o banker
-To **run**
+**To run:**
 - ./banker
 
 ## Expected output:
