@@ -1,13 +1,13 @@
 // Rylan Bowe
 // Banker's algorithm implementation, uses text file to simulate system state
-// 4/28/2025
+// 4/28/20
 
 #include "banker.hpp"
 
 int main () {
     
     int processes[P] = {0, 1, 2, 3, 4}; // stores different processes in system
-    int allocated[P][R]; // matrix for number of resources of each type allocated to each process
+    int allocation[P][R]; // matrix for number of resources of each type allocated to each process
     int maximum[P][R]; // matrix for maximum number of resources of each type that each process will need
     int available[R]; // number of available resources for each type
 
@@ -23,7 +23,7 @@ int main () {
     // reading the allocation matrix and writing its contents to allocated[][]
     for (int i = 0; i < P; ++i) {
         for (int j = 0; j < R; ++j) {
-            in >> allocated[i][j];
+            in >> allocation[i][j];
         }
     }
     
@@ -40,6 +40,6 @@ int main () {
     }
 
     // invoking safeSequence() to check if system is in a safe state, and if yes, printing the safe sequence
-    safeSequence(available, maximum, allocated);
+    safeSequence(available, maximum, allocation);
 
 }
